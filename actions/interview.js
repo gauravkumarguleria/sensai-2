@@ -21,12 +21,27 @@ export async function generateQuiz() {
 
   if (!user) throw new Error("User not found");
 
+  //   const prompt = `
+  // Generate 10 Java technical multiple-choice questions for a ${
+  //     user.industry
+  //   } professional${
+  //     user.skills?.length ? ` with expertise in ${user.skills.join(", ")}` : ""
+  //   }.
+
+  // Each question should have 4 options.
+
+  // Return the response in this JSON format only, no additional text:
+  // {
+  //   "questions": [
+  //     {
+  //       "question": "string",
+  //       "options": ["string", "string", "string", "string"]
+  //     }
+  //   ]
+  // }
+  // `;
   const prompt = `
-Generate 10 Java technical multiple-choice questions for a ${
-    user.industry
-  } professional${
-    user.skills?.length ? ` with expertise in ${user.skills.join(", ")}` : ""
-  }.
+Generate 10 Java technical multiple-choice questions for a software engineering professional.
 
 Each question should have 4 options.
 
